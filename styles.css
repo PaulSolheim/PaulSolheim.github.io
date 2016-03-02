@@ -1,0 +1,31 @@
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+header a {
+    margin: 1px;
+    background-color: darkgrey;
+    font-size: 3em;
+    text-align: center;
+    text-decoration: none;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: lightgrey;
+}
+
+td {
+    border: 3px solid black;
+    min-height: 20vh;
+    min-width: 20vh;
+    font-size: 20vh;
+    text-align: center;
+}
