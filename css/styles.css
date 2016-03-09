@@ -1,31 +1,61 @@
-.flex-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+    .flex-box {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    .flex-left {
+        justify-content: flex-start;
+    }
+    
+    .flex-1 {
+        flex: 1;
+        min-width: 45vh;
+    }
+    
+    header,
+    article {
+        margin: 30px;
+    }
+    
+    header a {
+        margin: 1px;
+        background-color: darkgrey;
+        font-size: 3em;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    table {
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    
+    td {
+        border: 3px solid black;
+        min-height: 20vh;
+        min-width: 20vh;
+        font-size: 20vh;
+        text-align: center;
+        background-color: lightgrey;
+    }
 
-.flex-1 {
-    flex: 1;
-}
+    .em3{
+        font-size: 3em;
+    }
+    
+    .poengmerkelapp {   
+        min-width: 80px;
+        float: left;
+    }
 
-header a {
-    margin: 1px;
-    background-color: darkgrey;
-    font-size: 3em;
-    text-align: center;
-    text-decoration: none;
-}
+    button {
+        width: 180px;
+        height: 80px;
+        margin-top: 10px;
+        font-size: 0.8em;
+    }
 
-table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    background-color: lightgrey;
-}
-
-td {
-    border: 3px solid black;
-    min-height: 20vh;
-    min-width: 20vh;
-    font-size: 20vh;
-    text-align: center;
+img {
+    float: right
 }
