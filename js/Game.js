@@ -23,7 +23,6 @@ BasicGame.Game = function (game) {
     //  You can use any of these from any function within this State.
     //  But do consider them as being 'reserved words', i.e. don't create a property for your own game called "world" or you'll over-write the world reference.
     
-    // this.create();
     this.ball;
     this.paddle;
     this.bricks;
@@ -143,7 +142,6 @@ BasicGame.Game.prototype = {
 
     create: function () {
 
-        //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
         this.music = this.add.audio('boing');
         
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -201,7 +199,6 @@ BasicGame.Game.prototype = {
 
     update: function () {
 
-        //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
         paddle.x = this.game.input.x;
 
         if (paddle.x < 24)

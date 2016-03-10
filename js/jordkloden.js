@@ -89,8 +89,7 @@
     function createMoon() {
         // create geometry
         var sphereGeometry = new THREE.SphereGeometry(4, 30, 30);
-   
-        
+
         // load textures
         var moonTexture = new THREE.Texture();
         var loader = new THREE.ImageLoader();
@@ -98,31 +97,11 @@
             moonTexture.image = image;
             moonTexture.needsUpdate = true;
         });
-        
-        // var normalTexture = new THREE.Texture();
-        // var loader = new THREE.ImageLoader();
-        // loader.load('../images/moonbump2k.jpg', function (image) {
-        //     normalTexture.image = image;
-        //     normalTexture.needsUpdate = true;
-        // });
-        
-        // var specularTexture = new THREE.Texture();
-        // var loader = new THREE.ImageLoader();
-        // loader.load('../images/earthspec2k.jpg', function (image) {
-        //     specularTexture.image = image;
-        //     specularTexture.needsUpdate = true;
-        // });
-        
+
         // create materials
         var moonMaterial = new THREE.MeshPhongMaterial();
         moonMaterial.map = moonTexture;
-        
-        // moonMaterial.normalMap = normalTexture;
-        // moonMaterial.normalScale = new THREE.Vector2(0.7, 0.7);
-        
-        // moonMaterial.specularMap = specularTexture;
-        // moonMaterial.specular = new THREE.Color(0x262626);
-        
+
         var moonMesh = new THREE.Mesh(sphereGeometry, moonMaterial);
         moonMesh.name = 'moon';
         scene.add(moonMesh, 0, 0, 20);
@@ -181,7 +160,7 @@
         createStarfield();
         createMoon();
         
-        scene.getObjectByName('moon').position.x = 15;
+        scene.getObjectByName('moon').position.x = 5;
         scene.getObjectByName('moon').position.z = 20;
 
         document.body.appendChild(renderer.domElement);
