@@ -2,25 +2,202 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>Kodeklubben Javascript Kurs</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    
+    <meta charset="utf-8">
+
+    <title>Javascript oppgaver</title>
+    <meta name="description" content="Finn Javascript oppgaver til Kodekurs.">
+    <meta name="author" content="Pål Grønstad Solheim">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remove these two references once the files are in root with these file names -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.jpg">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
 </head>
 
 <body>
-    <header class="flex-box">
-        <a href="tic-tac-toe.html" class="link flex-1">Tripp trapp tresko</a>
-        <a href="jordkloden.html" class="link flex-1">Jordkloden</a>
-        <a href="breakout.html" class="link flex-1">Breakout</a>
+    
+    <header>
+        
+        <div class="center-global cf">
+
+            <a href="#1" class="logo-link"><img src="images/logo.png" alt="Javascript oppgaver logo" class="logo"></a>
+
+            <nav>
+                <ul>
+                    <li><a href="#2">Oppgaver</a></li>
+                    <li><a href="#3">Eksempler</a></li>
+                    <li><a href="#4">Bidragsytere</a></li>
+                </ul>
+            </nav>
+
+        </div><!-- header-inside -->
+        
     </header>
-    <img src="images/homer-simpson.jpg">
-    <article>
-        <h1>JavaScript</h1>
-        <p>Dette webområdet er en demo for Oppegård kodeklubb sin sesjon om JavaScript. Det består av to websider, denne og en side hvor man kan spille tripp-trapp-tresko. Det er tiltenkt som undervisningseksempel for barn fra 12 år og oppover.</p>
-        <p>All kode for dette eksempelet er tilgjengelig på <a href="https://github.com/olillevik/olillevik.github.io">https://github.com/olillevik/olillevik.github.io</a>. Forslag til forbedringer mottas gjerne. De kan foreslås gjennom å åpne et "issue" i githubrepoet som du finner under ovenstående link. Forbedringer kan også foreslås gjennom pullrequests til repoet.
-        </p>
-        <p>Alt innholdet på dette webområdet og i githubrepoet kan brukes av hvem som helst til hva som helst. Legg gjerne igjen beskjed til forfatteren om du tar det i bruk. Det er veldig hyggelig å høre slike historier. </p>
-    </article>
+
+    <div class="promo center-global">
+
+        <img src="images/promo.jpg" alt="Jordkloden 3D" width="1020" height="353">
+
+        <div class="promo-desc">
+        <h1>Jordkloden 3D med bruk av ThreeJS.</h1>
+        <a href="jordkloden.html" class="promo-btn">Se Oppgaven!</a>
+        </div>
+
+    </div><!-- promo -->
+
+    <div class="main center-global cf">
+
+        <div class="latest">
+
+            <h1>De nyeste oppgavene</h1>
+
+            <div class="media">
+                
+                <a href="tic-tac-toe.html">
+                    <img src="images/tic-tac-toe.jpg" alt="Tripp Trapp Tresko">
+                    <h2>Tripp Trapp Tresko Spill</h2>
+                    <p>Tidsbruk: <span>2</span> kurskvelder</p>
+                </a>
+
+            </div><!-- .media -->
+
+            <div class="media">
+
+                <a href="breakout.html">
+                    <img src="images/breakout.jpg" alt="Breakout">
+                    <h2>Breakout Spill med Phaser</h2>
+                    <p>Tidsbruk: <span>3</span> kurskvelder</p>
+                </a>
+
+            </div><!-- .media -->
+
+            <div class="media">
+
+                <a href="jordkloden.html">
+                    <img src="images/jordkloden.jpg" alt="Jordkloden 3D">
+                    <h2>Jordkloden 3D med ThreeJS</h2>
+                    <p>Tidsbruk: <span>3</span> kurskvelder</p>
+                </a>
+
+            </div><!-- .media -->
+
+            <div class="media">
+                
+                <a href="breakout.html">
+                    <img src="images/breakout.jpg" alt="Breakout">
+                    <h2>Breakout Spill med Phaser</h2>
+                    <p>Tidsbruk: <span>3</span> kurskvelder</p>
+                </a>
+
+            </div><!-- .media -->
+
+            <a href="#10" class="promo-btn more-btn">finn flere oppgaver</a>
+
+        </div><!-- .latest -->
+
+        <aside class="sidebar">
+
+            <h2>Mest populære</h2>
+
+            <div class="popular cf">
+                <div class="rating">4.9/5</div>
+                <div class="pop-item"><a href="tic-tac-toe.html">Tripp Trapp Tresko</a></div><!-- .pop-item -->
+
+                <div class="rating">4.8/5</div>
+                <div class="pop-item"><a href="breakout.html">Breakout Spill</a></div><!-- .pop-item -->
+
+                <div class="rating">4.8/5</div>
+                <div class="pop-item"><a href="jordkloden.html">Jordkloden 3D</a></div><!-- .pop-item -->
+
+                <div class="rating">4.7/5</div>
+                <div class="pop-item"><a href="#14">Nytt Spill</a></div><!-- .pop-item -->
+
+                <div class="rating">4.6/5</div>
+                <div class="pop-item"><a href="#15">Enda et Spill</a></div><!-- .pop-item -->
+
+                <div class="rating">4.3/5</div>
+                <div class="pop-item"><a href="#16">Nok et Spill</a></div><!-- .pop-item -->
+            </div><!-- .popular -->
+
+            <h2>Javascript Tweets</h2>
+
+            <div class="tweet">
+                <p><a href="#17">@Peter</a> : Smart.js is an IoT software platform that allows you to integrate secure connectivity and data intelligence into your products. <a href="#">@Javascript</a><br>
+                <a href="#18" class="date">24 minutes ago</a></p>
+            </div><!-- .tweet -->
+
+            <div class="tweet">
+                <p><a href="#19">@Paul</a> : THREEx is games extensions for three.js. Check it out if you write games with three.js.<br>
+                <a href="#20" class="date">1 hour ago</a></p>
+            </div><!-- .tweet -->
+
+            <div class="tweet">
+                <p><a href="#21">@Mary</a> : melonJS is a lightweight but yet powerful HTML5 framework designed from the ground up to provide a true plugin-free 'write-once, run-everywhere' gaming oriented library.<br>
+                <a href="#22" class="date">2 days ago</a></p>
+            </div><!-- .tweet -->
+
+            <div class="tweet">
+                <p><a href="#23">@photonstorm</a> : Thousands of developers across the world are using Phaser to make their games.<br>
+                <a href="#24" class="date">2 days ago</a></p>
+            </div><!-- .tweet -->
+
+        </aside><!-- .sidebar -->
+
+    </div><!-- .main -->
+
+    <footer>
+
+        <div class="footer-inside center-global cf">
+
+            <div class="footer-1">
+                <h2>Oppgave Kategorier</h2>
+                <ul class="cf">
+                    <li><a href="#25">Javascript</a></li>
+                    <li><a href="#26">ThreeJS</a></li>
+                    <li><a href="#27">Phaser</a></li>
+                    <li><a href="#28">MelonJS</a></li>
+                    <li><a href="#29">Turbulenz</a></li>
+                    <li><a href="#30">NodeJS</a></li>
+                    <li><a href="#31">THREEx</a></li>
+                    <li><a href="#32">Diverse</a></li>
+                </ul>
+            </div><!-- .footer-1 -->
+
+            <div class="footer-2">
+                <h2>Bidragsytere</h2>
+                <ul>
+                    <li><a href="#33">Ørjan Lillevik</a></li>
+                    <li><a href="#34">Pål Solheim</a></li>
+                    <li><a href="#35">Ole Bull</a></li>
+                </ul>
+
+            </div><!-- .footer-2 -->
+
+            <div class="footer-3">
+                <h2>Colophon</h2>
+                <ul>
+                    <li><a href="#36">Kodeklubber</a></li>
+                    <li><a href="#37">Github Repoer</a></li>
+                    <li><a href="#38">Lær Kidsa Koding</a></li>
+                </ul>
+
+                <p>Copyright 2016<br>© Kodeklubben</p>
+
+            </div><!-- .footer-3 -->
+
+        </div><!-- .footer-inside -->
+
+    </footer>
+
 </body>
 
 </html>
