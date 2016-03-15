@@ -79,7 +79,7 @@ function create() {
     game.add.text(game.world.width - 100, 10, 'Liv : ', { font: '34px Arial', fill: '#fff' });
 
     //  Text
-    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#fff' });
+    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '64px Arial', fill: '#fff' });
     stateText.anchor.setTo(0.5, 0.5);
     stateText.visible = false;
 
@@ -202,7 +202,7 @@ function collisionHandler (bullet, alien) {
         scoreText.text = scoreString + score;
 
         enemyBullets.callAll('kill',this);
-        stateText.text = " Du vant!, \n klikk = nytt level";
+        stateText.text = " Du vant!, \n klikk for nytt nivå";
         stateText.visible = true;
 
         //the "click to restart" handler
@@ -233,7 +233,7 @@ function enemyHitsPlayer (player,bullet) {
         player.kill();
         enemyBullets.callAll('kill');
 
-        stateText.text=" SLUTT \n klikk = nytt spill";
+        stateText.text=" GAME OVER \n klikk for nytt spill";
         stateText.visible = true;
         level = 0;
 
