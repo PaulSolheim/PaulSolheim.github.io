@@ -11,12 +11,21 @@
 	<script src="/js/Game.js"></script>
 </head>
 <body style="margin: 0; padding:0">
-    <header class="flex-box">
-        <a href="index.html" class="link flex-1">Hjem</a>
-        <a href="tic-tac-toe.html" class="link flex-1">Tripp trapp tresko</a>
-        <a href="jordkloden.html" class="link flex-1">Jordkloden</a>
+    <header>
+        <div class="center-global cf">
+
+            <a href="index.html" class="logo-link"><img src="images/logo.png" alt="Javascript oppgaver logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="#2">Oppgaver</a></li>
+                    <li><a href="#3">Eksempler</a></li>
+                    <li><a href="#4">Bidragsytere</a></li>
+                </ul>
+            </nav>
+        </div><!-- header-inside -->
     </header>
     
+<div id="spacer" style="height: 40px"></div>     
 <div id="gameContainer" style="width:1024px; margin:0 auto;"></div>
 
 <script type="text/javascript">
@@ -25,7 +34,7 @@ window.onload = function() {
 
 	//	Create your Phaser game and inject it into the gameContainer div.
 	//	We did it in a window.onload event, but you can do it anywhere (requireJS load, anonymous function, jQuery dom ready, - whatever floats your boat)
-	var game = new Phaser.Game(1024, 768, Phaser.AUTO, 'gameContainer');
+	var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameContainer');
 
 	//	Add the States your game has.
 	//	You don't have to do this in the html, it could be done in your Boot state too, but for simplicity I'll keep it here.

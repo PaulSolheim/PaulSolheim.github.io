@@ -56,7 +56,7 @@ BasicGame.Game.prototype = {
     ballLost: function () {
 
         this.lives--;
-        this.livesText.text = 'lives: ' + this.lives;
+        this.livesText.text = 'liv: ' + this.lives;
 
         if (this.lives === 0)
         {
@@ -92,15 +92,15 @@ BasicGame.Game.prototype = {
 
         this.score += 10;
 
-        this.scoreText.text = 'score: ' + this.score;
+        this.scoreText.text = 'poeng: ' + this.score;
 
         //  Are they any bricks left?
         if (bricks.countLiving() == 0)
         {
             //  New level starts
             this.score += 1000;
-            this.scoreText.text = 'score: ' + this.score;
-            this.introText.text = '- Next Level -';
+            this.scoreText.text = 'poeng: ' + this.score;
+            this.introText.text = '- Neste Nivå -';
 
             //  Let's move the ball back to the paddle
             this.ballOnPaddle = true;
@@ -149,7 +149,7 @@ BasicGame.Game.prototype = {
         //  We check bounds collisions against all walls other than the bottom one
         this.game.physics.arcade.checkCollision.down = false;
 
-        this.s = this.game.add.tileSprite(0, 0, 1024, 768, 'starfield');
+        this.s = this.game.add.tileSprite(0, 0, 800, 600, 'starfield');
 
         bricks = this.game.add.group();
         bricks.enableBody = true;
@@ -189,9 +189,9 @@ BasicGame.Game.prototype = {
 
         ball.events.onOutOfBounds.add(this.ballLost, this);
 
-        this.scoreText = this.game.add.text(32, 550, 'score: 0', { font: "20px Arial", fill: "#ffffff", align: "left" });
-        this.livesText = this.game.add.text(680, 550, 'lives: 3', { font: "20px Arial", fill: "#ffffff", align: "left" });
-        this.introText = this.game.add.text(this.game.world.centerX, 400, '- click to start -', { font: "40px Arial", fill: "#ffffff", align: "center" });
+        this.scoreText = this.game.add.text(32, 550, 'poeng: 0', { font: "20px Arial", fill: "#ffffff", align: "left" });
+        this.livesText = this.game.add.text(680, 550, 'liv: 3', { font: "20px Arial", fill: "#ffffff", align: "left" });
+        this.introText = this.game.add.text(this.game.world.centerX, 400, '- klikk for å starte -', { font: "40px Arial", fill: "#ffffff", align: "center" });
         this.introText.anchor.setTo(0.5, 0.5);
 
         this.game.input.onDown.add(this.releaseBall, this);

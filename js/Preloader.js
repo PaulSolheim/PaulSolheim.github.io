@@ -13,8 +13,6 @@ BasicGame.Preloader.prototype = {
 	preload: function () {
 
 		//	These are the assets we loaded in Boot.js
-		//	A nice sparkly background and a loading progress bar
-		// this.background = this.add.sprite(300, 200, 'preloaderBackground');
 		this.preloadBar = this.add.sprite(300, 500, 'preloaderBar');
 
 		//	This sets the preloadBar sprite as a loader sprite.
@@ -23,15 +21,12 @@ BasicGame.Preloader.prototype = {
 		this.load.setPreloadSprite(this.preloadBar);
 
 		//	Here we load the rest of the assets our game needs.
-		//	As this is just a Project Template I've not provided these assets, swap them for your own.
-		this.load.image('titlepage', '../images/title.png');
-		this.load.atlas('playButton', '../images/play_button.png', '../images/play_button.json');
+		this.load.image('titlepage', '../images/breakout/title.png');
+		this.load.atlas('playButton', '../images/breakout/play_button.png', '../images/breakout/play_button.json');
 		this.load.audio('titleMusic', ['audio/title.mp3']);
         this.load.audio('boing', ['audio/boing.ogg', 'audio/boing.mp3'])
-		// this.load.bitmapFont('caslon', 'fonts/caslon.png', 'fonts/caslon.xml');
-		//	+ lots of other required assets here
-        this.load.atlas('breakout', '../images/breakout.png', './images/breakout.json');
-        this.load.image('starfield', '../images/starfield.jpg');        
+        this.load.atlas('breakout', '../images/breakout/breakout.png', './images/breakout/breakout.json');
+        this.load.image('starfield', '../images/breakout/starfield.jpg');        
 
 	},
 
