@@ -52,21 +52,21 @@
         // load textures
         var earthTexture = new THREE.Texture();
         var loader = new THREE.ImageLoader();
-        loader.load('../images/earthmap2k.jpg', function (image) {
+        loader.load('../images/jordkloden/earthmap2k.jpg', function (image) {
             earthTexture.image = image;
             earthTexture.needsUpdate = true;
         });
         
         var normalTexture = new THREE.Texture();
         var loader = new THREE.ImageLoader();
-        loader.load('../images/earth_normalmap_flat2k.jpg', function (image) {
+        loader.load('../images/jordkloden/earth_normalmap_flat2k.jpg', function (image) {
             normalTexture.image = image;
             normalTexture.needsUpdate = true;
         });
         
         var specularTexture = new THREE.Texture();
         var loader = new THREE.ImageLoader();
-        loader.load('../images/earthspec2k.jpg', function (image) {
+        loader.load('../images/jordkloden/earthspec2k.jpg', function (image) {
             specularTexture.image = image;
             specularTexture.needsUpdate = true;
         });
@@ -93,7 +93,7 @@
         // load textures
         var moonTexture = new THREE.Texture();
         var loader = new THREE.ImageLoader();
-        loader.load('../images/moonmap2k.jpg', function (image) {
+        loader.load('../images/jordkloden/moonmap2k.jpg', function (image) {
             moonTexture.image = image;
             moonTexture.needsUpdate = true;
         });
@@ -112,7 +112,7 @@
         
         var cloudsTexture = new THREE.Texture();
         var loader = new THREE.ImageLoader();
-        loader.load('../images/fair_clouds_1k.png', function(image) {
+        loader.load('../images/jordkloden/fair_clouds_1k.png', function(image) {
             cloudsTexture.image = image;
             cloudsTexture.needsUpdate = true;
         });
@@ -133,7 +133,7 @@
         // create the material, using a texture of starfield
         var envTexture = new THREE.Texture();
         var loader = new THREE.ImageLoader();
-        loader.load('../images/galaxy_starfield.png', function(image) {
+        loader.load('../images/jordkloden/galaxy_starfield.png', function(image) {
             envTexture.image = image;
             envTexture.needsUpdate = true;
         });
@@ -145,7 +145,25 @@
         var mesh = new THREE.Mesh(envGeometry, envMaterial);
         scene.add(mesh);
     }
-
+    
+    function loadModel() {
+        var material = new THREE.MeshPhongMaterial({
+            specular: 0x222222,
+            shininess: 35
+        });
+        
+        var loader = new THREE.OBJLoader();
+        loader.load('../images/jordkloden/Ship.obj', function(object) {
+            object.traverse(function (child) {
+                if (child instanceof THREE.Mesh) {
+                    child.material = material,
+                        child.position.y -= 10;
+                }
+            });
+            scene.add(object);
+        });
+    }
+    
     //init() gets executed once
     function init() {
 
@@ -159,6 +177,8 @@
         createClouds();
         createStarfield();
         createMoon();
+        
+        // loadModel();
         
         scene.getObjectByName('moon').position.x = 5;
         scene.getObjectByName('moon').position.z = 20;
