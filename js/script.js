@@ -1,82 +1,72 @@
 (function () {
     'use strict';
-    //skriv koden din her
-    // hjelpemetode
+
     var el = function (id) {
         return document.getElementById(id + "");
     };
 
-    // modell
+    //modell
     var spiller = "";
-    var trekk = ["", "", "", "", "", "", "", "", ""];
-    
-    var brett = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
+    var trekk = new Array(9);
 
-    var oppdaterModell = function (knappTrykket) {
+    const brett = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
+
+    var oppdater = function (knappTrykket) {
         console.log("Knapp trykket med id: " + knappTrykket);
-        settSpiller();
-        lagreTrekk(knappTrykket);
-    };
-
-    var vis = function () {
-        tegnMerkerPaaBrettet();
+        if (trekk[knappTrykket] == undefined) {
+            settSpiller();
+            lagreTrekk(knappTrykket);
+            vis();
+        }
     };
 
     var settSpiller = function () {
-        return (spiller === "0") ? spiller = "X" : spiller = "0";
+        return (spiller === "0") ? spiller = "x" : spiller = "0";
     };
 
     var lagreTrekk = function (felt) {
         return trekk[felt] = spiller;
     };
 
+    var vis = function () {
+        tegnMerkerPaaBrettet();
+    };
+
     var tegnMerkerPaaBrettet = function () {
-        console.log("Tegner merker");
-        brett.map(tegnMerke);
+        brett.forEach(tegnMerke);
     };
 
     var tegnMerke = function (felt) {
-        if (trekk[felt] !== "") {
-            console.log("Tegner merke for felt: " + felt);
+        if (trekk[felt] != undefined)
             el(felt).innerHTML = trekk[felt];
-        }
     };
 
-    // hendelser
     el(0).addEventListener("click", function () {
-        oppdaterModell(0);
-        vis();
+        oppdater(0);
     });
     el(1).addEventListener("click", function () {
-        oppdaterModell(1);
-        vis();
+        oppdater(1);
     });
     el(2).addEventListener("click", function () {
-        oppdaterModell(2);
-        vis();
+        oppdater(2);
     });
     el(3).addEventListener("click", function () {
-        oppdaterModell(3);
-        vis();
+        oppdater(3);
     });
     el(4).addEventListener("click", function () {
-        oppdaterModell(4);
-        vis();
+        oppdater(4);
     });
     el(5).addEventListener("click", function () {
-        oppdaterModell(5);
-        vis();
+        oppdater(5);
     });
     el(6).addEventListener("click", function () {
-        oppdaterModell(6);
-        vis();
+        oppdater(6);
     });
     el(7).addEventListener("click", function () {
-        oppdaterModell(7);
-        vis();
+        oppdater(7);
     });
     el(8).addEventListener("click", function () {
-        oppdaterModell(8);
-        vis();
-    });    
-}) ();
+        oppdater(8);
+    });
+
+})();

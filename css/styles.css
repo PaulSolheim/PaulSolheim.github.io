@@ -13,6 +13,11 @@
     min-width: 45vh;
 }
 
+tripp-trapp {
+    background-image: image('../images/board.png');
+    z-index: 1000;
+}
+
 article {
     margin: 30px;
 }
@@ -20,6 +25,8 @@ article {
 table {
     table-layout: fixed;
     border-collapse: collapse;
+    width: 600;
+    height: 600;
 }
 
 td {
@@ -28,7 +35,7 @@ td {
     min-width: 20vh;
     font-size: 20vh;
     text-align: center;
-    background-color: lightgrey;
+    //background-color: lightgrey;
 }
 
 .em3{
